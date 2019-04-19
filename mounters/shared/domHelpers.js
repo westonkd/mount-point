@@ -7,7 +7,7 @@ function nodeFromComponentName(componentName) {
     return node;
   }
 
-  throw MountPointMissing();
+  throw MountPointMissing(componentName);
 }
 
 function propsForComponent(componentName) {
@@ -16,7 +16,7 @@ function propsForComponent(componentName) {
   try {
     return JSON.parse(node.getAttribute("data-props")) || {};
   } catch (e) {
-    throw InvalidProps();
+    throw InvalidProps(componentName);
   }
 }
 

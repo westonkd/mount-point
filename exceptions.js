@@ -1,13 +1,13 @@
-function MountPointMissing() {
+function MountPointMissing(name = "") {
   return {
-    message: "Mount point was not found.",
+    message: `Mount point was not found for ${name}.`,
     type: "MountPointMissing"
   };
 }
 
-function InvalidProps() {
+function InvalidProps(name = "") {
   return {
-    message: "There was an error parsing props from the mount point.",
+    message: `There was an error parsing props from the mount point (${name}).`,
     type: "InvalidProps"
   };
 }
