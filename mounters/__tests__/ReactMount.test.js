@@ -1,5 +1,5 @@
 import React from "react";
-import { mount } from "../ReactMount";
+import { reactMount } from "../ReactMount";
 
 class Hello extends React.Component {
   constructor(props) {
@@ -33,12 +33,12 @@ describe("when the mount point does exist", () => {
   });
 
   it("mounts the class component with props", () => {
-    mount(Hello);
+    reactMount(Hello);
     expect(document.body.innerHTML).toMatch(/<div>Hello World<\/div>/);
   });
 
   it("mounts pure functional components", () => {
-    mount(Goodbye);
+    reactMount(Goodbye);
     expect(document.body.innerHTML).toMatch(/<div>Goodbye World<\/div>/);
   });
 
@@ -50,12 +50,12 @@ describe("when the mount point does exist", () => {
     });
 
     it("mounts class components without props", () => {
-      mount(Hello);
+      reactMount(Hello);
       expect(document.body.innerHTML).toMatch(/<div>Hello <\/div>/);
     });
 
     it("mounts class components without props", () => {
-      mount(Goodbye);
+      reactMount(Goodbye);
       expect(document.body.innerHTML).toMatch(/<div>Goodbye <\/div>/);
     });
   });
@@ -69,7 +69,7 @@ describe("when the mount point does exist", () => {
 
     it("raises an exception for class components", () => {
       try {
-        mount(Hello);
+        reactMount(Hello);
       } catch (error) {
         expect(error.type).toEqual("InvalidProps");
       }
@@ -77,7 +77,7 @@ describe("when the mount point does exist", () => {
 
     it("raises an exception for class components", () => {
       try {
-        mount(Goodbye);
+        reactMount(Goodbye);
       } catch (error) {
         expect(error.type).toEqual("InvalidProps");
       }
