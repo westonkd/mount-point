@@ -12,7 +12,15 @@ function InvalidProps(name = "") {
   };
 }
 
+function UnknownFramework(name = "") {
+  return {
+    message: `MountPoint does not know how to mount ${name} components`,
+    type: "UnknownFramework"
+  };
+}
+
 module.exports = {
   MountPointMissing,
-  InvalidProps
+  InvalidProps,
+  UnknownFramework
 };

@@ -2,7 +2,7 @@ import { nodeFromComponentName, propsForComponent } from "./shared/domHelpers";
 import React from "react";
 import { render } from "react-dom";
 
-function mount(component) {
+function reactMount(component) {
   const name = componentName(component);
   const mountPoint = nodeFromComponentName(name);
   const props = propsForComponent(name);
@@ -15,5 +15,5 @@ function componentName(component) {
 }
 
 module.exports = {
-  mount
+  reactMount
 };
