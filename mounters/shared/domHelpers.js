@@ -1,6 +1,6 @@
 import { MountPointMissing, InvalidProps } from "../../exceptions";
 
-function nodeFromComponentName(componentName) {
+export function nodeFromComponentName(componentName) {
   const node = document.getElementById(`${componentName}_mount_point`);
 
   if (node) {
@@ -10,7 +10,7 @@ function nodeFromComponentName(componentName) {
   throw MountPointMissing(componentName);
 }
 
-function propsForComponent(componentName) {
+export function propsForComponent(componentName) {
   const node = nodeFromComponentName(componentName);
 
   try {
@@ -19,8 +19,3 @@ function propsForComponent(componentName) {
     throw InvalidProps(componentName);
   }
 }
-
-module.exports = {
-  nodeFromComponentName,
-  propsForComponent
-};
