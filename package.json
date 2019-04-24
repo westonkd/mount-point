@@ -1,6 +1,6 @@
 {
   "name": "mount-point",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple utility to mount JavaScript components and parse props from DOM elements. Designed to be paired with the \"mount_point\" Ruby gem.",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "author": "Weston Dransfield",
   "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
   "dependencies": {
     "react-dom": "^16.8.6"
   },
