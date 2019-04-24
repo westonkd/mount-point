@@ -1,6 +1,6 @@
 {
   "name": "mount-point",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple utility to mount JavaScript components and parse props from DOM elements. Designed to be paired with the \"mount_point\" Ruby gem.",
   "main": "build/index.js",
   "scripts": {
