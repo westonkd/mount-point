@@ -1,10 +1,12 @@
 {
   "name": "mount-point",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple utility to mount JavaScript components and parse props from DOM elements. Designed to be paired with the \"mount_point\" Ruby gem.",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "webpack --watch",
+    "build": "webpack"
   },
   "author": "Weston Dransfield",
   "license": "MIT",
@@ -20,7 +22,9 @@
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.7.1",
+    "babel-loader": "^8.0.5",
     "jest": "^24.7.1",
-    "react": "^16.8.6"
+    "react": "^16.8.6",
+    "webpack": "^2.7.0"
   }
 }

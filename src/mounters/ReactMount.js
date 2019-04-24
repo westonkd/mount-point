@@ -1,7 +1,6 @@
 import { nodeFromComponentName, propsForComponent } from "./shared/domHelpers";
-
-const React = require("react");
-const render = require("react-dom").render;
+import React from "react";
+import { render } from "react-dom";
 
 export function reactMount(component) {
   const name = componentName(component);
